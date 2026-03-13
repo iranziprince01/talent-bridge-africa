@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, Linkedin } from "lucide-react";
 
 const footerLinks = {
@@ -20,9 +21,18 @@ export function Footer() {
       <div className="mx-auto flex max-w-[68rem] flex-col gap-10 px-4 py-10 sm:px-6 lg:px-8 lg:py-12">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm space-y-3">
-            <h3 className="text-sm font-semibold tracking-tight">
-              Talent Bridge Africa
-            </h3>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/logo_footer.png"
+                alt="Talent Bridge Africa logo"
+                width={32}
+                height={32}
+                className="h-8 w-8 shrink-0 object-contain"
+              />
+              <h3 className="text-sm font-semibold tracking-tight">
+                Talent Bridge Africa
+              </h3>
+            </div>
             <p className="text-sm text-white text-justify">
               Connecting current students, graduates, and refugee youth with ambitious growing
               businesses across Africa.
