@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.75rem;
+}
+
+html {
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
+.gradient-border {
+  position: relative;
+  isolation: isolate;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(12, 96, 255, 0.18), rgba(147, 31, 255, 0.18));
+  opacity: 1;
+  z-index: -1;
+}
+
+.glass-panel {
+  /* Tailwind-style look, implemented with plain CSS
+     to avoid Tailwind v4 @apply PostCSS restrictions. */
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  border: 1px solid #e2e8f0; /* slate-200 */
+}
+
+/* Smooth section anchor offset for sticky nav */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
