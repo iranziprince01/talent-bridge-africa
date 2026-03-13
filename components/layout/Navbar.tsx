@@ -25,7 +25,7 @@ export function Navbar() {
       <nav className="relative mx-auto flex max-w-[68rem] items-center justify-between gap-4 px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6">
         <Link href="#about" className="flex shrink-0 items-center gap-2" onClick={closeMobile}>
           <Image
-            src="/LOGO.png"
+            src="/logo.png"
             alt="Talent Bridge Africa logo"
             width={32}
             height={32}
